@@ -78,7 +78,7 @@ async def main():
         # Gets data from OPC UA Server
         raw_data = collect_data()
         # Updates Data and current anomaly label
-        time_series_data = [[raw_data[1], raw_data[0], AnomalyLabel]]
+        time_series_data = [[raw_data[0], raw_data[1], AnomalyLabel]]
 
         data = ns_hymap_inference.prepare_time_series(time_series_data)
 
